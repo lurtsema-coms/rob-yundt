@@ -66,7 +66,7 @@
                 <div class="grid grid-cols-2 mt-5 gap-x-5 gap-y-8 lg:grid-cols-3">
                     <div class="flex flex-col items-center justify-start">
                         <a href="https://secure.anedot.com/rob-yundt/donate?amount=50" target="_blank" class="px-10 py-3 font-semibold text-white rounded-md bg-custom-gradient">$50</a>
-                        <p class="text-sm italic text-center text-gray-600">pays for 5 yard sign</p>
+                        <p class="text-sm italic text-center text-gray-600">pays for 5 yard signs</p>
                     </div>
                     <div class="flex flex-col items-center justify-start">
                         <a href="https://secure.anedot.com/rob-yundt/donate?amount=100" target="_blank" class="px-10 py-3 font-semibold text-white rounded-md bg-custom-gradient">$100</a>
