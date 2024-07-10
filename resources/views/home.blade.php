@@ -86,7 +86,7 @@
                 <a href="https://secure.anedot.com/rob-yundt/donate" target="_blank" class="px-16 py-3 font-semibold text-white rounded-md bg-custom-gradient">DONATE</a>
             </div>
             <hr class="my-10 border-t-2 border-primary">
-            <div x-data="{ isVolunteer: false }">
+            <div x-data="{ isVolunteer: true }">
                 <h1 class="text-4xl font-semibold text-center font-bebas text-primary">INTERESTED IN VOLUNTEERING, HOSTING A MEET & GREET, OR NEED A YARD SIGN?</h1>
                 <div class="flex flex-row items-center justify-center gap-5">
                     <button type="button" :class="{ 'opacity-50': !isVolunteer }" @click="isVolunteer = true"
@@ -103,7 +103,7 @@
                             name="first_name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                             placeholder="John" 
-                            required 
+                            :required="isVolunteer" 
                         >
                     </div>
                     <div class="mb-5">
@@ -114,7 +114,7 @@
                             name="last_name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                             placeholder="Doe" 
-                            required 
+                            :required="isVolunteer" 
                         />
                     </div>
                     <div class="mb-5">
@@ -122,9 +122,10 @@
                         <input 
                             type="email" 
                             id="email"
+                            name="email"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                             placeholder="johndoe@example.com" 
-                            required 
+                            :required="isVolunteer" 
                         />
                     </div>
                     <div class="mb-5">
@@ -135,7 +136,7 @@
                             name="phone"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                             placeholder="" 
-                            required 
+                            :required="isVolunteer" 
                         />
                     </div>
                     <div class="mb-5">
@@ -146,7 +147,7 @@
                             name="home_address"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                             placeholder="" 
-                            required 
+                            :required="isVolunteer" 
                         />
                     </div>
                 </div>
