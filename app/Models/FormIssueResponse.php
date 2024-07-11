@@ -14,4 +14,9 @@ class FormIssueResponse extends Model
     {
         return $this->belongsTo(FormResponse::class);
     }
+
+    public function issue()
+    {
+        return $this->belongsTo(Issue::class);
+    }
 }
