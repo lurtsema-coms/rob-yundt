@@ -53,8 +53,8 @@
                     @endforeach
                         <input 
                             type="text" 
-                            id="other_issue" 
-                            name="other_issue" 
+                            id="other_issues" 
+                            name="other_issues" 
                             class="w-full max-w-screen-sm text-primary"
                             placeholder="Other: Please specify">
                 </div>
