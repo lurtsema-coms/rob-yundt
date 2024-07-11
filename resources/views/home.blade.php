@@ -39,16 +39,16 @@
                 <h1 class="w-full p-5 mb-5 text-lg font-semibold text-center rounded-lg text-primary bg-slate-50">I will fight for all of the below issues, help me prioritize by selecting the ones most important to you.</h1>
                 @csrf
                 <div class="flex flex-col items-start justify-start gap-3">
-                    @foreach ($options as $index => $option)
+                    @foreach ($issues as $issue)
                         <div class="flex flex-row items-start justify-start gap-5">
                             <input 
-                                id="bordered-checkbox-{{ $index }}" 
+                                id="bordered-checkbox-{{ $issue->id }}" 
                                 type="checkbox"
-                                value="{{ $option }}" 
+                                value="{{ $issue->id }}" 
                                 name="selected_issues[]"
                                 class="mt-1 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-600-800 focus:ring-2"
                             >
-                            <label for="bordered-checkbox-{{ $index }}" class="w-full font-medium">{{ $option }}</label>
+                            <label for="bordered-checkbox-{{ $issue->id }}" class="w-full font-medium">{{ $issue->description }}</label>
                         </div>
                     @endforeach
                         <input 
@@ -140,7 +140,7 @@
                         />
                     </div>
                     <div class="mb-5">
-                        <label for="home_address" class="block mb-2 text-sm font-medium text-gray-900 ">Home Address</label>
+                        <label for="home_address" class="block mb-2 text-sm font-medium text-gray-900 ">Home Address <span class="text-[0.7rem] italic text-gray-500">(for yard sign requests)</span></label>
                         <input 
                             type="text" 
                             id="home_address"
