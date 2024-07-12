@@ -1,11 +1,13 @@
 <?php
 
+use App\Exports\FormResponseExport;
 use App\Http\Controllers\ProfileController;
 use App\Models\FormIssueResponse;
 use App\Models\FormResponse;
 use App\Models\Issue;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Maatwebsite\Excel\Facades\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +51,10 @@ Route::post('/issues', function (Request $request) {
 
     return redirect()->back()->with('success', 'Your response has been submitted. Thank you!');
 })->name('issues.store');
+
+Route::get('/download-responses', function () {
+    return Excel::download(new FormResponseExport, 'form-responses.xlsx');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
