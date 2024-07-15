@@ -176,7 +176,7 @@
             <div class="max-w-screen-sm mx-auto">
                 <h1 class="text-4xl font-semibold text-center font-bebas text-primary">HOW ELSE CAN WE MAKE ALASKA BETTER? </h1>
                 <h3 class="mt-3 mb-3 text-xl font-bold text-center text-primary">TELL ROB YOUR INSIGHTS OR ASK HIM A QUESTION  </h3>
-                <textarea name="message" id="message" rows="10" class="w-full rounded-md resize-none" placeholder="Type your message here..."></textarea>
+                <textarea name="message" id="message" rows="10" class="w-full rounded-md resize-none focus:ring-primary focus:border-primary" placeholder="Type your message here..."></textarea>
             </div>
             <hr class="my-10 border-t-2 border-primary">
             <div class="max-w-screen-sm mx-auto">
